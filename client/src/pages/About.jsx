@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Target, Eye, Heart, Calendar, Users, Award, Cpu, Globe, Shield } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
 import { ContinuousSection, ContinuousCard, GradientText, GlassPanel } from '../components/SharedStyles'
+import SEO from '../components/SEO'
 
 const About = () => {
   const timeline = [
@@ -43,6 +44,11 @@ const About = () => {
 
   return (
     <AnimatedBackground>
+       <SEO 
+        title="About Riseup-Tech - Our Mission, Vision & Team"
+        description="Learn about Riseup-Tech's mission to revolutionize technology in Nepal. Discover our vision for AI-powered digital ecosystems and meet our leadership team."
+        keywords="About Riseup-Tech, Nepal Tech Company, AI Innovation, Company Mission, Technology Vision"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 py-24">
 
         {/* Hero Section */}

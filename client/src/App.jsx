@@ -13,7 +13,7 @@ import HelpSupport from './pages/HelpSupport'
 import JobApplication from './components/JobApplication'
 import AppReview from './components/AppReview'
 import ProtectedAdmin from './components/ProtectedAdmin'
-import AdminDashboard from './components/AdminDashboard'
+import NotFound from './pages/NotFound' // Create this component
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/ecosystem" element={<Ecosystem />} />
             <Route path="/careers" element={<Careers />} />
@@ -32,7 +33,8 @@ function App() {
             <Route path="/careers/apply/:jobId" element={<JobApplication />} />
             <Route path="/review" element={<AppReview />} />
             <Route path="/admin" element={<ProtectedAdmin />} />
-            {/* <Route path="/admin" element={<AdminDashboard />} /> */}
+            {/* Catch all route - 404 */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

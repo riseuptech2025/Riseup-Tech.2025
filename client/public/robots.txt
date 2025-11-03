@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://riseup-tech-2025.vercel.app/sitemap.xml
+Sitemap: https://riseup-tech-2025.vercel.app/sitemap-0.xml
+
+# Directories
+Disallow: /admin
+Disallow: /api
+
+# Allow all other pages
+Allow: /about
+Allow: /ecosystem
+Allow: /careers
+Allow: /contact
+Allow: /news
+Allow: /help-support
+Allow: /review

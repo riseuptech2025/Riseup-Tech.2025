@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Users, Brain, Book, Video, Cloud, MessageCircle, Briefcase, ArrowRight, Zap, Shield, Globe } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
+import SEO from '../components/SEO'
 
 const Ecosystem = () => {
   const products = [
@@ -99,6 +100,11 @@ const Ecosystem = () => {
 
   return (
     <AnimatedBackground>
+       <SEO 
+        title="Riseup Ecosystem - AI-Powered Digital Products Suite"
+        description="Explore the Riseup ecosystem: Riseup-Connect, Riseup-AI, Riseup-Learn, and more. Integrated digital platforms for learning, connection, and innovation."
+        keywords="Riseup Ecosystem, Riseup-Connect, Riseup-AI, Riseup-Learn, Digital Products, AI Platforms"
+      />
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

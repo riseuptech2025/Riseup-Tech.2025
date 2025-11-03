@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { MapPin, Clock, DollarSign, Users, Rocket, BookOpen } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
+import SEO from '../components/SEO'
 
 const Careers = () => {
   const jobOpenings = [
@@ -103,6 +104,11 @@ const Careers = () => {
 
   return (
     <AnimatedBackground>
+      <SEO 
+        title="Careers at Riseup-Tech - Join Our Innovative Team"
+        description="Explore exciting career opportunities at Riseup-Tech. Join us in building the future of AI and technology in Nepal and beyond."
+        keywords="Riseup-Tech Careers, Jobs in Nepal, AI Jobs, Technology Careers, Join Riseup-Tech"
+      />
       {/* Hero */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Book, FileText, Shield, HelpCircle, Mail } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
+import SEO from '../components/SEO'
 
 const HelpSupport = () => {
   const [activeTab, setActiveTab] = useState('docs')
@@ -50,6 +51,11 @@ const HelpSupport = () => {
 
   return (
     <AnimatedBackground>
+      <SEO
+        title="Riseup-Tech Help & Support - Documentation, FAQs & Contact"
+        description="Find answers, guides, and resources for all Riseup-Tech products. Access documentation, FAQs, and contact our support team."
+        keywords="Riseup-Tech Help, Support, Documentation, FAQs, Contact Support, Riseup-Connect Help, Riseup-AI Support"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <motion.div

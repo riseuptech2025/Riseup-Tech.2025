@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
+import SEO from '../components/SEO'
 
 const News = () => {
   const newsArticles = [
@@ -72,6 +73,11 @@ const News = () => {
 
   return (
     <AnimatedBackground>
+      <SEO 
+        title="Riseup-Tech News & Updates - Latest in AI & Technology"
+        description="Stay updated with the latest news, product launches, and innovations from Riseup-Tech. Explore articles on AI, technology, education, and career opportunities."
+        keywords="Riseup-Tech News, AI Innovations, Product Launches, Technology Updates, Careers at Riseup-Tech"
+      />
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

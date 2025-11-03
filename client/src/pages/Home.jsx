@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Users, Book, Video, Cloud } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
+import SEO from '../components/SEO'
 
 const Home = () => {
   const products = [
@@ -47,7 +48,11 @@ const Home = () => {
   return (
     <AnimatedBackground>
       <Hero />
-      
+       <SEO 
+        title="Riseup-Tech - Building the Future of AI & Innovation in Nepal"
+        description="Building the future of AI, connection, and innovation. We create intelligent platforms that empower people and transform industries worldwide."
+        keywords="Riseup-Tech, AI Nepal, Technology Nepal, Software Development, Digital Innovation"
+      />
       {/* Products Preview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

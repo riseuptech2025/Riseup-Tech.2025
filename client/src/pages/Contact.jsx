@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, MessageCircle, Briefcase } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
 import { useWebsiteData } from '../hooks/useWebsiteData'
+import SEO from '../components/SEO'
 
 const Contact = () => {
   const websiteData = useWebsiteData()
@@ -84,6 +85,11 @@ const Contact = () => {
 
   return (
     <AnimatedBackground>
+      <SEO 
+        title="Contact Riseup-Tech - Get in Touch with Us"
+        description="Have questions or want to collaborate? Contact Riseup-Tech for inquiries about our AI products, partnerships, careers, and more."
+        keywords="Contact Riseup-Tech, AI Inquiries, Technology Collaboration, Careers at Riseup-Tech, Partnership Opportunities"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 
         {/* Header Section */}
