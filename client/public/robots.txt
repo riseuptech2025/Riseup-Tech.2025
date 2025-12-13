@@ -2,8 +2,8 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://riseup-tech-2025.vercel.app/sitemap.xml
-Sitemap: https://riseup-tech-2025.vercel.app/sitemap-0.xml
+Sitemap: https://www.riseup-tech.com.np/sitemap.xml
+Sitemap: https://www.riseup-tech.com.np/sitemap-0.xml
 
 # Directories
 Disallow: /admin
