@@ -45,7 +45,7 @@ const Navbar = () => {
             >
               {/* Your logo instead of Rocket icon */}
               <img
-                src="/logo.jpg" // make sure logo.png is inside /public folder
+                src="/logo.png" // make sure logo.png is inside /public folder
                 alt="Riseup-Tech Logo"
                 className="h-9 w-9 object-contain rounded-lg"
               />
