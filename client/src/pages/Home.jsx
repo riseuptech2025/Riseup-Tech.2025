@@ -49,7 +49,7 @@ const Home = () => {
     <AnimatedBackground>
       <Hero />
        <SEO 
-        title="Riseup-Tech - Building the Future of AI & Innovation in Nepal"
+        title="Riseup-Tech"
         description="Building the future of AI, connection, and innovation. We create intelligent platforms that empower people and transform industries worldwide."
         keywords="Riseup-Tech, AI Nepal, Technology Nepal, Software Development, Digital Innovation"
       />

@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 const SEO = ({ title, description, keywords, image }) => {
   const location = useLocation()
   
-  const defaultTitle = "Riseup-Tech - Building the Future of AI & Innovation in Nepal"
+  const defaultTitle = "Riseup-Tech"
   const defaultDescription = "Building the future of AI, connection, and innovation. We create intelligent platforms that empower people and transform industries worldwide."
   const defaultKeywords = "Riseup-Tech, AI Nepal, Technology Nepal, Software Development, Riseup-Connect, Riseup-AI, Nepal Tech Company"
   const defaultImage = "https://www.riseup-tech.com.np/og-image.jpg"
