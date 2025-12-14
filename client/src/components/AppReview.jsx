@@ -16,11 +16,10 @@ const AppReview = () => {
   })
 
   const apps = [
-    'Riseup-Connect',
-    'Riseup-AI',
-    'Riseup-Learn',
-    'Riseup-Reels',
-    'Riseup-Drive',
+    'School Management System',
+    'Library Management System',
+    'Office Management System',
+    
   ]
 
   const handleChange = (e) => {

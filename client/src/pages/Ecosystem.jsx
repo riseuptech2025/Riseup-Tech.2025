@@ -10,30 +10,30 @@ const Ecosystem = () => {
   const products = [
     {
       icon: Users,
-      name: 'Riseup-Connect',
+      name: 'School Management System',
       category: 'Social & Learning',
-      description: 'Social platform for students, developers, and creators to share knowledge, posts, projects, and ideas in a collaborative environment.',
-      features: ['Posts & videos sharing', 'Comments & messaging', 'Friends/follow system', 'Project showcase'],
+      description: 'Comprehensive platform connecting students, teachers, and parents with integrated learning tools and community features.',
+      features: ['Student profiles', 'Class management', 'Parent-teacher communication', 'Learning resources', 'Community forum', 'Progress tracking'],
       status: 'In Development',
-      launchDate: 'Q4 2025',
+      launchDate: 'Q4 2026',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Brain,
-      name: 'Riseup-AI',
+      name: 'Office Management System',
       category: 'AI & Productivity',
-      description: 'Personal AI assistant for learning, coding, and productivity with personalized recommendations and content guidance.',
-      features: ['Personalized recommendations', 'AI chat assistant', 'Content guidance', 'Learning support'],
+      description: 'AI-powered office management system for task automation, document management, and collaboration.',
+      features: ['Task automation', 'Document management', 'Collaboration tools', 'Analytics dashboard'],
       status: 'In Development',
       launchDate: 'Q1 2026',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Book,
-      name: 'Riseup-Learn',
-      category: 'Education',
-      description: 'AI-powered personalized learning platform for students and professionals with courses, tutorials, and progress tracking.',
-      features: ['AI-powered courses', 'Progress tracking', 'Personalized recommendations', 'Skill development'],
+      name: 'Library Management System',
+      category: 'Education & Resources',
+      description: 'AI-powered library management system for efficient cataloging, borrowing, and tracking of books and resources.',
+      features: ['AI-powered cataloging', 'Borrowing system', 'Resource tracking', 'User management'],
       status: 'Planning',
       launchDate: 'Q2 2026',
       color: 'from-green-500 to-emerald-500',
@@ -102,8 +102,8 @@ const Ecosystem = () => {
     <AnimatedBackground>
        <SEO 
         title="Riseup Ecosystem - AI-Powered Digital Products Suite"
-        description="Explore the Riseup ecosystem: Riseup-Connect, Riseup-AI, Riseup-Learn, and more. Integrated digital platforms for learning, connection, and innovation."
-        keywords="Riseup Ecosystem, Riseup-Connect, Riseup-AI, Riseup-Learn, Digital Products, AI Platforms"
+        description="Explore the Riseup ecosystem: School Management System, Riseup-AI, Riseup-Learn, and more. Integrated digital platforms for learning, connection, and innovation."
+        keywords="Riseup Ecosystem, School Management System, Riseup-AI, Riseup-Learn, Digital Products, AI Platforms"
       />
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

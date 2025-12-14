@@ -9,9 +9,9 @@ const HelpSupport = () => {
 
   const docs = [
     {
-      title: 'Getting Started with Riseup-Connect',
+      title: 'Getting Started with School Management System',
       description: 'Learn how to set up your account and start connecting',
-      category: 'Riseup-Connect',
+      category: 'School Management System',
     },
     {
       title: 'AI Tools Guide',

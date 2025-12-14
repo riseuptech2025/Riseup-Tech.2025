@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 const About = () => {
   const timeline = [
     { year: '2025', title: 'Company Founded', description: 'Riseup-Tech was established with a vision to transform technology in Nepal and build an integrated digital ecosystem.' },
-    { year: '2026', title: 'Core Platform Launch', description: 'Development begins on Riseup-Connect and Riseup-AI - the foundation of our ecosystem.' },
+    { year: '2026', title: 'Core Platform Launch', description: 'School Management System, Student Information System, and Teacher Management System were launched, setting the foundation for Riseup-Tech' },
     { year: '2027', title: 'Ecosystem Expansion', description: 'Launch of Riseup-Learn, Riseup-Drive, and additional AI-powered tools.' },
     { year: '2028', title: 'Platform Maturity', description: 'Full ecosystem integration with unified Riseup Account across all services.' },
   ]
@@ -23,9 +23,15 @@ const About = () => {
   const leadership = [
     {
       name: 'Ramanand Mandal',
-      position: 'CEO & Co-Founder',
+      position: 'CEO & CTO',
       description: 'Visionary leader overseeing company strategy, product design, and ecosystem growth. Driving innovation in Nepal\'s tech landscape.',
       initials: 'RM'
+    },
+    {
+      name: 'Dipak Kumar Mandal Khatwe',
+      position: 'Founder',
+      description: 'Expert in AI and technology, leading the development of Riseup\'s cutting-edge solutions. Sustaining growth and scalability.',
+      initials: 'DKM'
     }
   ]
 
@@ -39,6 +45,11 @@ const About = () => {
       type: 'Registered Office', 
       address: 'Tilathi-Koiladi Rural Municipality-2, Launiya, Saptari, Nepal',
       description: 'Official registered location supporting regional operations'
+    },
+    {
+      type: 'Branch Office',
+      address: 'Biratnagar, Morang, Nepal',
+      description: 'Expanding our presence in Eastern Nepal to better serve our users '
     }
   ]
 
@@ -223,7 +234,7 @@ const About = () => {
           <h2 className="text-4xl font-bold mb-12 gradient-text">Building Nepal's Tech Future</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '1', label: 'Unified Ecosystem' },
+              { number: '50+', label: 'Custom Websites' },
               { number: '6+', label: 'Digital Products' },
               { number: '2', label: 'Strategic Locations' },
               { number: 'AI-First', label: 'Approach' },

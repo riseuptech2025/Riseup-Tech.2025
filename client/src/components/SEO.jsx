@@ -6,7 +6,7 @@ const SEO = ({ title, description, keywords, image }) => {
   
   const defaultTitle = "Riseup-Tech"
   const defaultDescription = "Building the future of AI, connection, and innovation. We create intelligent platforms that empower people and transform industries worldwide."
-  const defaultKeywords = "Riseup-Tech, AI Nepal, Technology Nepal, Software Development, Riseup-Connect, Riseup-AI, Nepal Tech Company"
+  const defaultKeywords = "Riseup-Tech, AI Nepal, Technology Nepal, Software Development, School Management System, Riseup-AI, Nepal Tech Company"
   const defaultImage = "https://www.riseup-tech.com.np/og-image.jpg"
   
   useEffect(() => {
