@@ -38,7 +38,7 @@ const Footer = () => {
               >
                 {/* ✅ Your company logo instead of Rocket icon */}
                 <img
-                  src="/logo.svg" // Make sure logo.png is inside public/
+                  src="/logo.png" // Make sure logo.png is inside public/
                   alt="Riseup-Tech Logo"
                   className="h-10 w-10 object-contain rounded-lg"
                 />
