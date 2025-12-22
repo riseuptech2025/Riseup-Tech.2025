@@ -12,7 +12,10 @@ import {
   Edit3,
   CheckCircle,
   Mail,
+  UserPlus,
 } from 'lucide-react'
+import { useState } from 'react'
+import MembershipForm from './MembershipForm'
 
 const Section = ({ icon: Icon, title, children }) => (
   <div className="glass-card p-6 rounded-2xl mb-6">
@@ -25,146 +28,167 @@ const Section = ({ icon: Icon, title, children }) => (
 )
 
 const Documentation = () => {
+  const [showForm, setShowForm] = useState(false)
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-none"
-    >
-      {/* Header */}
-      <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold mb-2">Riseup-Tech Membership Document</h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          Company Name: Riseup-Tech Pvt. Ltd. | Location: Basundhara, Kathmandu, Nepal
-        </p>
-      </div>
-
-      <Section icon={Info} title="1. Introduction">
-        <p>
-          This Membership Document outlines the terms, conditions, roles, and responsibilities of individuals who become members of Riseup-Tech Pvt. Ltd. The purpose is to ensure transparency, professionalism, and mutual understanding.
-        </p>
-      </Section>
-
-      <Section icon={User} title="2. Membership Eligibility">
-        <ul className="list-disc ml-6">
-          <li>Be at least 18 years old</li>
-          <li>Possess relevant skills, qualifications, or interest in technology/software</li>
-          <li>Agree to comply with company rules, policies, and ethical standards</li>
-          <li>Successfully complete the registration or selection process defined by the company</li>
-        </ul>
-      </Section>
-
-      <Section icon={Users} title="3. Types of Membership">
-        <ul className="list-disc ml-6">
-          <li>Intern Member – Students or freshers undergoing training or internship</li>
-          <li>Associate Member – Junior-level contributors or trainees</li>
-          <li>Professional Member – Full-time or part-time developers and professionals</li>
-          <li>Admin/Core Member – Founders, managers, or administrative staff</li>
-        </ul>
-        <p className="italic text-sm">
-          Membership type is assigned based on skills, experience, and company requirements.
-        </p>
-      </Section>
-
-      <Section icon={Shield} title="4. Member Responsibilities">
-        <ul className="list-disc ml-6">
-          <li>Follow company policies, rules, and guidelines</li>
-          <li>Maintain confidentiality of company data, projects, and client information</li>
-          <li>Work honestly, responsibly, and professionally</li>
-          <li>Respect team members, clients, and management</li>
-          <li>Meet deadlines and maintain quality standards</li>
-        </ul>
-      </Section>
-
-      <Section icon={Lock} title="5. Code of Conduct">
-        <ul className="list-disc ml-6">
-          <li>Avoid any form of misconduct, harassment, or unethical behavior</li>
-          <li>Not engage in activities that may harm the company’s reputation</li>
-          <li>Not use company resources for illegal or personal misuse</li>
-          <li>Maintain discipline and professional behavior at all times</li>
-        </ul>
-        <p className="text-red-500 font-medium">
-          Violation may lead to termination of membership.
-        </p>
-      </Section>
-
-      <Section icon={FileText} title="6. Confidentiality Agreement">
-        <ul className="list-disc ml-6">
-          <li>All data, source code, designs, documents, or client info shared during membership is confidential</li>
-          <li>Confidential info must not be disclosed to third parties during or after membership</li>
-          <li>Breach of confidentiality may result in legal action</li>
-        </ul>
-      </Section>
-
-      <Section icon={Award} title="7. Intellectual Property">
-        <ul className="list-disc ml-6">
-          <li>All work, code, designs, and materials created during membership remain the intellectual property of Riseup-Tech</li>
-          <li>Members may not reuse or distribute company work without written permission</li>
-        </ul>
-      </Section>
-
-      <Section icon={Calendar} title="8. Duration and Termination">
-        <ul className="list-disc ml-6">
-          <li>Membership duration defined at joining</li>
-          <li>Riseup-Tech may terminate membership for misconduct, poor performance, or policy violations</li>
-          <li>Members may voluntarily resign by providing prior notice</li>
-        </ul>
-      </Section>
-
-      <Section icon={Gift} title="9. Benefits of Membership">
-        <ul className="list-disc ml-6">
-          <li>Hands-on experience in real-world projects</li>
-          <li>Skill development and learning opportunities</li>
-          <li>Certificates or recommendation letters (if applicable)</li>
-          <li>Career growth and networking opportunities</li>
-        </ul>
-        <p className="italic text-sm">
-          Benefits depend on membership type and performance.
-        </p>
-      </Section>
-
-      <Section icon={Edit3} title="10. Amendment of Terms">
-        <p>
-          Riseup-Tech reserves the right to modify or update this membership document at any time. Members will be notified of significant changes.
-        </p>
-      </Section>
-
-      <Section icon={CheckCircle} title="11. Acceptance">
-        <p>
-          By signing below, the member confirms that they have read, understood, and agreed to all terms and conditions mentioned in this document.
-        </p>
-      </Section>
-
-      <Section icon={Mail} title="Contact Us">
-        <p>
-          <strong>Riseup-Tech</strong>
-          <br />
-          📍 Basundhara, Kathmandu, Nepal
-          <br />
-          📧{' '}
-          <a
-            href="mailto:riseuptech2025@gmail.com"
-            className="text-primary underline"
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-none"
+      >
+        {/* Header with Apply Button */}
+        <div className="text-center mb-10 relative">
+          <h2 className="text-4xl font-bold mb-2">Riseup-Tech Membership Document</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+            Company Name: Riseup-Tech Pvt. Ltd. | Location: Basundhara, Kathmandu, Nepal
+          </p>
+          
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setShowForm(true)}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
           >
-            riseuptech2025@gmail.com
-          </a>
-          <br />
-          🌐{' '}
-          <a
-            href="https://riseup-tech.com.np"
-            target="_blank"
-            rel="noreferrer"
-            className="text-primary underline"
-          >
-            riseup-tech.com.np
-          </a>
-        </p>
-      </Section>
+            <UserPlus size={20} />
+            Apply for Membership
+          </motion.button>
+          
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+            Interested in joining our team? Click above to submit your application.
+          </p>
+        </div>
 
-      <div className="text-center text-gray-500 dark:text-gray-400 mt-10">
-        <p>This document is the official membership agreement of Riseup-Tech Pvt. Ltd., Basundhara, Kathmandu, Nepal.</p>
-      </div>
-    </motion.div>
+        <Section icon={Info} title="1. Introduction">
+          <p>
+            This Membership Document outlines the terms, conditions, roles, and responsibilities of individuals who become members of Riseup-Tech Pvt. Ltd. The purpose is to ensure transparency, professionalism, and mutual understanding.
+          </p>
+        </Section>
+
+        <Section icon={User} title="2. Membership Eligibility">
+          <ul className="list-disc ml-6">
+            <li>Be at least 18 years old</li>
+            <li>Possess relevant skills, qualifications, or interest in technology/software</li>
+            <li>Agree to comply with company rules, policies, and ethical standards</li>
+            <li>Successfully complete the registration or selection process defined by the company</li>
+          </ul>
+        </Section>
+
+        <Section icon={Users} title="3. Types of Membership">
+          <ul className="list-disc ml-6">
+            <li>Intern Member – Students or freshers undergoing training or internship</li>
+            <li>Associate Member – Junior-level contributors or trainees</li>
+            <li>Professional Member – Full-time or part-time developers and professionals</li>
+            <li>Admin/Core Member – Founders, managers, or administrative staff</li>
+          </ul>
+          <p className="italic text-sm">
+            Membership type is assigned based on skills, experience, and company requirements.
+          </p>
+        </Section>
+
+        <Section icon={Shield} title="4. Member Responsibilities">
+          <ul className="list-disc ml-6">
+            <li>Follow company policies, rules, and guidelines</li>
+            <li>Maintain confidentiality of company data, projects, and client information</li>
+            <li>Work honestly, responsibly, and professionally</li>
+            <li>Respect team members, clients, and management</li>
+            <li>Meet deadlines and maintain quality standards</li>
+          </ul>
+        </Section>
+
+        <Section icon={Lock} title="5. Code of Conduct">
+          <ul className="list-disc ml-6">
+            <li>Avoid any form of misconduct, harassment, or unethical behavior</li>
+            <li>Not engage in activities that may harm the company's reputation</li>
+            <li>Not use company resources for illegal or personal misuse</li>
+            <li>Maintain discipline and professional behavior at all times</li>
+          </ul>
+          <p className="text-red-500 font-medium">
+            Violation may lead to termination of membership.
+          </p>
+        </Section>
+
+        <Section icon={FileText} title="6. Confidentiality Agreement">
+          <ul className="list-disc ml-6">
+            <li>All data, source code, designs, documents, or client info shared during membership is confidential</li>
+            <li>Confidential info must not be disclosed to third parties during or after membership</li>
+            <li>Breach of confidentiality may result in legal action</li>
+          </ul>
+        </Section>
+
+        <Section icon={Award} title="7. Intellectual Property">
+          <ul className="list-disc ml-6">
+            <li>All work, code, designs, and materials created during membership remain the intellectual property of Riseup-Tech</li>
+            <li>Members may not reuse or distribute company work without written permission</li>
+          </ul>
+        </Section>
+
+        <Section icon={Calendar} title="8. Duration and Termination">
+          <ul className="list-disc ml-6">
+            <li>Membership duration defined at joining</li>
+            <li>Riseup-Tech may terminate membership for misconduct, poor performance, or policy violations</li>
+            <li>Members may voluntarily resign by providing prior notice</li>
+          </ul>
+        </Section>
+
+        <Section icon={Gift} title="9. Benefits of Membership">
+          <ul className="list-disc ml-6">
+            <li>Hands-on experience in real-world projects</li>
+            <li>Skill development and learning opportunities</li>
+            <li>Certificates or recommendation letters (if applicable)</li>
+            <li>Career growth and networking opportunities</li>
+          </ul>
+          <p className="italic text-sm">
+            Benefits depend on membership type and performance.
+          </p>
+        </Section>
+
+        <Section icon={Edit3} title="10. Amendment of Terms">
+          <p>
+            Riseup-Tech reserves the right to modify or update this membership document at any time. Members will be notified of significant changes.
+          </p>
+        </Section>
+
+        <Section icon={CheckCircle} title="11. Acceptance">
+          <p>
+            By signing below, the member confirms that they have read, understood, and agreed to all terms and conditions mentioned in this document.
+          </p>
+        </Section>
+
+        <Section icon={Mail} title="Contact Us">
+          <p>
+            <strong>Riseup-Tech</strong>
+            <br />
+            📍 Basundhara, Kathmandu, Nepal
+            <br />
+            📧{' '}
+            <a
+              href="mailto:riseuptech2025@gmail.com"
+              className="text-primary underline"
+            >
+              riseuptech2025@gmail.com
+            </a>
+            <br />
+            🌐{' '}
+            <a
+              href="https://riseup-tech.com.np"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary underline"
+            >
+              riseup-tech.com.np
+            </a>
+          </p>
+        </Section>
+
+        <div className="text-center text-gray-500 dark:text-gray-400 mt-10">
+          <p>This document is the official membership agreement of Riseup-Tech Pvt. Ltd.</p>
+        </div>
+      </motion.div>
+
+      {/* Membership Form Modal */}
+      {showForm && <MembershipForm onClose={() => setShowForm(false)} />}
+    </>
   )
 }
 

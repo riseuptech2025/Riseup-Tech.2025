@@ -124,10 +124,16 @@ const Footer = () => {
             <span className="text-white font-semibold">Riseup-Tech</span>. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-6 mt-4 md:mt-0">
-            <Link to="/help-support#privacy" className="hover:text-white transition-all">
+            <Link to="/help-support?tab=docs" className="hover:text-white transition-all">
+              Documentation
+            </Link>
+            <Link to="/help-support?tab=faq" className="hover:text-white transition-all">
+              FAQ
+            </Link>
+            <Link to="/help-support?tab=privacy" className="hover:text-white transition-all">
               Privacy Policy
             </Link>
-            <Link to="/help-support#terms" className="hover:text-white transition-all">
+            <Link to="/help-support?tab=terms" className="hover:text-white transition-all">
               Terms of Service
             </Link>
           </div>

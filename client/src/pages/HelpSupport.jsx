@@ -6,7 +6,6 @@ import {
   Shield,
   HelpCircle,
   RotateCcw,
-  Search,
 } from 'lucide-react'
 import { useSearchParams } from 'react-router-dom'
 
@@ -29,13 +28,13 @@ const tabs = [
 
 const HelpSupport = () => {
   const [searchParams, setSearchParams] = useSearchParams()
+
   const initialTab =
     searchParams.get('tab') ||
     localStorage.getItem('help-tab') ||
     'docs'
 
   const [activeTab, setActiveTab] = useState(initialTab)
-  const [search, setSearch] = useState('')
 
   useEffect(() => {
     localStorage.setItem('help-tab', activeTab)
@@ -45,9 +44,9 @@ const HelpSupport = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'docs':
-        return <Documentation search={search} />
+        return <Documentation />
       case 'faq':
-        return <FAQs search={search} />
+        return <FAQs />
       case 'terms':
         return <TermsOfService />
       case 'privacy':
@@ -80,19 +79,6 @@ const HelpSupport = () => {
             Find answers, policies, and guides for all Riseup-Tech products
           </p>
         </motion.div>
-
-        {/* Search */}
-        <div className="max-w-xl mx-auto mb-12">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
-            <input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search documentation or FAQs..."
-              className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/60 dark:bg-black/30 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary outline-none"
-            />
-          </div>
-        </div>
 
         {/* Tabs */}
         <div className="relative flex flex-wrap justify-center gap-4 mb-14">
