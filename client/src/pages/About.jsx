@@ -5,6 +5,10 @@ import AnimatedBackground from '../components/AnimatedBackground'
 import { ContinuousSection, ContinuousCard, GradientText, GlassPanel } from '../components/SharedStyles'
 import SEO from '../components/SEO'
 
+// Import the images
+import RamanandMandalImage from '../assets/members/ramanand.jpg'
+import DipakKumarMandalKhatweImage from '../assets/members/dipak.jpeg'
+
 const About = () => {
   const timeline = [
     { year: '2025', title: 'Company Founded', description: 'Riseup-Tech was established with a vision to transform technology in Nepal and build an integrated digital ecosystem.' },
@@ -25,13 +29,15 @@ const About = () => {
       name: 'Ramanand Mandal',
       position: 'CEO & CTO',
       description: 'Visionary leader overseeing company strategy, product design, and ecosystem growth. Driving innovation in Nepal\'s tech landscape.',
-      initials: 'RM'
+      image: RamanandMandalImage,
+      alt: 'Ramanand Mandal - CEO & CTO of Riseup-Tech'
     },
     {
       name: 'Dipak Kumar Mandal Khatwe',
       position: 'Founder',
       description: 'Expert in AI and technology, leading the development of Riseup\'s cutting-edge solutions. Sustaining growth and scalability.',
-      initials: 'DKM'
+      image: DipakKumarMandalKhatweImage,
+      alt: 'Dipak Kumar Mandal Khatwe - Founder of Riseup-Tech'
     }
   ]
 
@@ -133,20 +139,26 @@ const About = () => {
           </div>
         </div>
 
-        {/* Leadership Section */}
+        {/* Leadership Section - UPDATED WITH IMAGES */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-12 gradient-text">Our Leadership</h2>
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {leadership.map((leader, index) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-8 rounded-3xl border border-gray-700/20 backdrop-blur-md text-center"
+                className="p-8 rounded-3xl border border-gray-700/20 backdrop-blur-md text-center hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  {leader.initials}
+                <div className="w-40 h-40 mx-auto mb-6">
+                  <motion.img
+                    src={leader.image}
+                    alt={leader.alt}
+                    className="w-full h-full object-cover rounded-full border-4 border-transparent bg-gradient-to-r from-primary to-secondary p-1 shadow-lg"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-2">{leader.name}</h3>
                 <p className="text-lg text-gray-300 mb-3">{leader.position}</p>
@@ -155,6 +167,37 @@ const About = () => {
             ))}
           </div>
         </div>
+
+        {/* Alternative Leadership Section with smaller images */}
+        {/* 
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-12 gradient-text">Our Leadership</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {leadership.map((leader, index) => (
+              <motion.div
+                key={leader.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-start p-6 rounded-3xl border border-gray-700/20 backdrop-blur-md hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex-shrink-0 w-20 h-20 mr-6">
+                  <img
+                    src={leader.image}
+                    alt={leader.alt}
+                    className="w-full h-full object-cover rounded-full border-2 border-primary"
+                  />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-bold text-primary mb-1">{leader.name}</h3>
+                  <p className="text-gray-300 mb-3">{leader.position}</p>
+                  <p className="text-gray-400 text-sm">{leader.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        */}
 
         {/* Locations Section */}
         <div className="text-center">
@@ -236,7 +279,7 @@ const About = () => {
             {[
               { number: '50+', label: 'Custom Websites' },
               { number: '6+', label: 'Digital Products' },
-              { number: '2', label: 'Strategic Locations' },
+              { number: '3', label: 'Strategic Locations' },
               { number: 'AI-First', label: 'Approach' },
             ].map((stat, index) => (
               <motion.div
