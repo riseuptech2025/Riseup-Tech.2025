@@ -11,7 +11,7 @@ const seedData = async () => {
       name: 'Riseup-Tech',
       email: 'riseuptech2025@gmail.com',
       phone: '+977-9827399860',
-      address: 'Basundhara-7, Kathmandu, Nepal',
+      address: 'Basundhara, Kathmandu, Nepal',
       registeredOffice: 'Tilathi-Koiladi Rural Municipality-2, Launiya, Saptari, Nepal'
     },
     hero: {

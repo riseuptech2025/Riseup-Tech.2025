@@ -13,7 +13,7 @@ import HelpSupport from './pages/HelpSupport'
 import JobApplication from './components/JobApplication'
 import AppReview from './components/AppReview'
 import ProtectedAdmin from './components/ProtectedAdmin'
-import NotFound from './pages/NotFound' // Create this component
+import NotFound from './pages/NotFound' 
 
 function App() {
   return (
