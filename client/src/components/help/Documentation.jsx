@@ -135,7 +135,7 @@ const Documentation = () => {
         </p>
       </Section>
 
-      <Section icon={Mail} title="15. Contact Us">
+      <Section icon={Mail} title="Contact Us">
         <p>
           <strong>Riseup-Tech</strong>
           <br />
