@@ -20,10 +20,10 @@ import PrivacyPolicy from '../components/help/PrivacyPolicy'
 import RefundPolicy from '../components/help/RefundPolicy'
 
 const tabs = [
-  { id: 'docs', label: 'Documentation', icon: Book },
+  { id: 'docs', label: 'Membership Docs', icon: Book },
   { id: 'faq', label: 'FAQs', icon: HelpCircle },
-  { id: 'terms', label: 'Terms', icon: FileText },
-  { id: 'privacy', label: 'Privacy', icon: Shield },
+  { id: 'terms', label: 'Terms & Conditions', icon: FileText },
+  { id: 'privacy', label: 'Privacy Policy', icon: Shield },
   { id: 'refund', label: 'Refund Policy', icon: RotateCcw },
 ]
 
