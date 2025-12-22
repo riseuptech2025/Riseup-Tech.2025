@@ -11,6 +11,7 @@ import {
   Gift,
   Edit3,
   CheckCircle,
+  Mail,
 } from 'lucide-react'
 
 const Section = ({ icon: Icon, title, children }) => (
@@ -34,7 +35,7 @@ const Documentation = () => {
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold mb-2">Riseup-Tech Membership Document</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          Company Name: Riseup-Tech Pvt. Ltd. | Location: Kathmandu, Nepal
+          Company Name: Riseup-Tech Pvt. Ltd. | Location: Basundhara, Kathmandu, Nepal
         </p>
       </div>
 
@@ -132,27 +133,36 @@ const Documentation = () => {
         <p>
           By signing below, the member confirms that they have read, understood, and agreed to all terms and conditions mentioned in this document.
         </p>
+      </Section>
 
-        <div className="mt-4 space-y-2">
-          <p><strong>Member Details:</strong></p>
-          <p>Full Name: ___________________________</p>
-          <p>Email: ______________________________</p>
-          <p>Role/Membership Type: _______________</p>
-          <p>Signature: ___________________________</p>
-          <p>Date: _______________________________</p>
-        </div>
-
-        <div className="mt-4 space-y-2">
-          <p><strong>Authorized by Riseup-Tech:</strong></p>
-          <p>Name: _______________________________</p>
-          <p>Designation: _________________________</p>
-          <p>Signature & Seal: ___________________</p>
-          <p>Date: _______________________________</p>
-        </div>
+      <Section icon={Mail} title="15. Contact Us">
+        <p>
+          <strong>Riseup-Tech</strong>
+          <br />
+          📍 Basundhara, Kathmandu, Nepal
+          <br />
+          📧{' '}
+          <a
+            href="mailto:riseuptech2025@gmail.com"
+            className="text-primary underline"
+          >
+            riseuptech2025@gmail.com
+          </a>
+          <br />
+          🌐{' '}
+          <a
+            href="https://riseup-tech.com.np"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary underline"
+          >
+            riseup-tech.com.np
+          </a>
+        </p>
       </Section>
 
       <div className="text-center text-gray-500 dark:text-gray-400 mt-10">
-        <p>This document is the official membership agreement of Riseup-Tech Pvt. Ltd., Kathmandu, Nepal.</p>
+        <p>This document is the official membership agreement of Riseup-Tech Pvt. Ltd., Basundhara, Kathmandu, Nepal.</p>
       </div>
     </motion.div>
   )

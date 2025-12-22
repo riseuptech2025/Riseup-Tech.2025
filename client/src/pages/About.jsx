@@ -38,7 +38,7 @@ const About = () => {
   const locations = [
     {
       type: 'Headquarters',
-      address: 'Basundhara-7, Kathmandu, Nepal',
+      address: 'Basundhara, Kathmandu, Nepal',
       description: 'Main operational center with development labs and innovation facilities'
     },
     {

@@ -61,7 +61,7 @@ const TermsOfService = () => {
       <Section icon={Building2} title="1. Company Information">
         <ul className="list-disc ml-6">
           <li><strong>Company Name:</strong> Riseup-Tech</li>
-          <li><strong>Location:</strong> Kathmandu, Nepal</li>
+          <li><strong>Location:</strong> Basundhara, Kathmandu, Nepal</li>
           <li><strong>Business Type:</strong> Software Development & IT Services</li>
           <li><strong>Email:</strong> riseuptech2025@gmail.com</li>
           <li><strong>Website:</strong> riseup-tech.com.np</li>
@@ -200,7 +200,7 @@ const TermsOfService = () => {
         <p>
           <strong>Riseup-Tech</strong>
           <br />
-          📍 Kathmandu, Nepal
+          📍 Basundhara, Kathmandu, Nepal
           <br />
           📧{' '}
           <a

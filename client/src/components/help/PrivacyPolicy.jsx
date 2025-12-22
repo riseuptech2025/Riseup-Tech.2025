@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
       <Section icon={Info} title="1. Company Information">
         <ul className="list-disc ml-6">
           <li><strong>Company Name:</strong> Riseup-Tech</li>
-          <li><strong>Location:</strong> Kathmandu, Nepal</li>
+          <li><strong>Location:</strong> Basundhara, Kathmandu, Nepal</li>
           <li><strong>Business Type:</strong> Software Development & IT Services</li>
         </ul>
       </Section>
@@ -197,7 +197,7 @@ const PrivacyPolicy = () => {
         <p>
           <strong>Riseup-Tech</strong>
           <br />
-          📍 Kathmandu, Nepal
+          📍 Basundhara, Kathmandu, Nepal
           <br />
           📧{' '}
           <a

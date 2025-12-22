@@ -160,7 +160,7 @@ const RefundPolicy = () => {
         <p>
           <strong>Riseup-Tech</strong>
           <br />
-          📍 Kathmandu, Nepal
+          📍 Basundhara, Kathmandu, Nepal
           <br />
           📧{' '}
           <a
