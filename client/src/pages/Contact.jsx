@@ -23,28 +23,46 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  // ✅ CORRECTED: Single handleSubmit function
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    const contactData = {
-      id: Date.now().toString(),
-      timestamp: new Date().toISOString(),
-      ...formData
+
+    try {
+      const response = await fetch('https://riseup-tech-2025-1.onrender.com/api/contact/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        // Reset form on success
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          interest: ''
+        })
+
+        alert(
+          'Thank you for your message! We will get back to you soon. Please check your email for confirmation.'
+        )
+      } else {
+        if (result.errors) {
+          const errorMessages = result.errors.map(err => err.msg).join('\n')
+          alert(`Please fix the following errors:\n${errorMessages}`)
+        } else {
+          alert(result.message || 'Failed to submit form')
+        }
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      alert('Network error. Please try again later.')
     }
-
-    const existingContacts = JSON.parse(localStorage.getItem('riseupTech_contacts') || '[]')
-    const updatedContacts = [...existingContacts, contactData]
-    localStorage.setItem('riseupTech_contacts', JSON.stringify(updatedContacts))
-
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      interest: ''
-    })
-
-    alert('Thank you for your message! We will get back to you soon.')
   }
 
   const contactInfo = [
@@ -233,7 +251,7 @@ const Contact = () => {
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Subject *
                 </label>
-                <input
+                  <input
                   type="text"
                   id="subject"
                   name="subject"
