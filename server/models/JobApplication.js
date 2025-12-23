@@ -1,3 +1,4 @@
+// models/JobApplication.js
 const mongoose = require('mongoose');
 
 const jobApplicationSchema = new mongoose.Schema({
@@ -5,15 +6,14 @@ const jobApplicationSchema = new mongoose.Schema({
   email: { type: String, required: true },
   phone: { type: String, required: true },
   position: { type: String, required: true },
-  coverLetter: { type: String, required: true },
+  coverLetter: { type: String },
   resume: {
-    filename: String,
-    originalName: String,
-    path: String
+    fileName: String,
+    filePath: String,
+    fileType: String,
+    fileSize: Number
   },
-  status: { type: String, default: 'pending' }
-}, {
-  timestamps: true
+  appliedAt: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('JobApplication', jobApplicationSchema);

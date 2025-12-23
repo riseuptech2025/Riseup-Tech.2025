@@ -23,11 +23,12 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/riseup_te
 .catch(err => console.log('MongoDB connection error:', err));
 
 // Routes
-app.use('/api/contacts', require('./routes/contact'));
-app.use('/api/reviews', require('./routes/reviews'));
+app.use('/api/contact', require('./routes/contact'));
+app.use('/api/reviews', require('./routes/reviewRoutes'));
 app.use('/api/website-data', require('./routes/websiteData'));
 app.use('/api/applications', require('./routes/applications'));
-app.use('/api/application', require('./routes/application'));
+// app.use('/api/application', require('./routes/application'));
+app.use('/api/jobapplications', require('./routes/jobapplications'));
 app.use('/api/locations', require('./routes/locations')); // Add locations route
 
 // Health check
