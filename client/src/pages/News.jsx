@@ -148,7 +148,7 @@ const News = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-white dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
                     {article.title}
                   </h3>
 

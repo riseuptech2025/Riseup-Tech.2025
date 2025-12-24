@@ -102,7 +102,7 @@ const AppReview = () => {
               >
                 <CheckCircle className="mx-auto h-16 w-16 text-green-500" />
               </motion.div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-3xl font-bold text-white dark:text-white mb-4">
                 Review Submitted!
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
@@ -130,7 +130,7 @@ const AppReview = () => {
             animate={{ opacity: 1, y: 0 }}
           >
             <GlassPanel className="p-8">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              <h1 className="text-3xl font-bold text-white dark:text-white mb-2">
                 Share Your <GradientText>Experience</GradientText>
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
@@ -170,7 +170,7 @@ const AppReview = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-dark-card focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-500 dark:border-gray-600 bg-white dark:bg-dark-card focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -217,7 +217,7 @@ const AppReview = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-white dark:text-gray-300 mb-2">
                     Your Review *
                   </label>
                   <textarea

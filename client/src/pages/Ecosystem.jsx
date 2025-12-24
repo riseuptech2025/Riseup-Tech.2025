@@ -160,7 +160,7 @@ const Ecosystem = () => {
                 <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-primary to-secondary mb-4">
                   <feature.icon className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-white dark:text-white mb-2">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -204,7 +204,7 @@ const Ecosystem = () => {
                     <product.icon className="text-white" size={24} />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-xl font-bold text-white dark:text-white">
                       {product.name}
                     </h3>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -218,7 +218,7 @@ const Ecosystem = () => {
                 </p>
 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Key Features:</h4>
+                  <h4 className="font-semibold text-white dark:text-white mb-2 text-sm">Key Features:</h4>
                   <div className="flex flex-wrap gap-1">
                     {product.features.map((feature, featureIndex) => (
                       <span

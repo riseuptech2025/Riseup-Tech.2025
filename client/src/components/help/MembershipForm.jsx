@@ -1170,7 +1170,7 @@ const MembershipForm = ({ onClose }) => {
               <button
                 type="button"
                 onClick={nextStep}
-                className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2"
+                className="px-6 py-2 bg-primary text-black dark:text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2"
               >
                 Next
                 <ChevronRight size={20} />

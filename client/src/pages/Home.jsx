@@ -83,7 +83,7 @@ const Home = () => {
                 <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${product.color} mb-4`}>
                   <product.icon className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-white dark:text-white mb-2">
                   {product.name}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">

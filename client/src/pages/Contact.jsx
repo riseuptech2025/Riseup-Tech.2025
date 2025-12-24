@@ -154,10 +154,10 @@ const Contact = () => {
                   <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-primary to-secondary mb-4">
                     <item.icon className="text-white" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-semibold text-white dark:text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-900 dark:text-white font-medium mb-1">
+                  <p className="text-white dark:text-white font-medium mb-1">
                     {item.details}
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -174,7 +174,7 @@ const Contact = () => {
               transition={{ delay: 0.4 }}
               className="glass-card p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl font-semibold text-white dark:text-white mb-4">
                 About Riseup-Tech
               </h3>
               <div className="space-y-3 text-gray-600 dark:text-gray-400">
@@ -207,7 +207,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-white dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                     placeholder="Your full name"
                   />
                 </div>
@@ -223,7 +223,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-white dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -238,7 +238,7 @@ const Contact = () => {
                   name="interest"
                   value={formData.interest}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-white dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                 >
                   <option value="">Select an option</option>
                   {interestOptions.map(option => (
@@ -258,7 +258,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-white dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                   placeholder="What is this regarding?"
                 />
               </div>
@@ -274,7 +274,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-white dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none"
                   placeholder="Tell us more about your inquiry..."
                 />
               </div>

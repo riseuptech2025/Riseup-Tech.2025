@@ -165,7 +165,7 @@ const Careers = () => {
                 <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-primary to-secondary mb-4">
                   <benefit.icon className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-white dark:text-white mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -206,7 +206,7 @@ const Careers = () => {
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-2xl font-semibold text-white dark:text-white mb-2">
                       {job.title}
                     </h3>
                     <div className="flex flex-wrap gap-4 mb-4">
