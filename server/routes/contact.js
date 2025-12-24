@@ -106,7 +106,7 @@ router.post('/submit', validateContactForm, async (req, res) => {
 });
 
 // Get all contacts (Admin only - add authentication in production)
-router.get('/admin', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     // Add authentication check in production
     const { page = 1, limit = 20, status } = req.query;

@@ -160,5 +160,24 @@ router.post('/', upload.fields([
     });
   }
 });
+// GET all applications
+router.get('/', async (req, res) => {
+  try {
+    const applications = await Application.find().sort({ createdAt: -1 });
+
+    res.status(200).json({
+      success: true,
+      count: applications.length,
+      data: applications
+    });
+  } catch (error) {
+    console.error('❌ Error fetching applications:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to fetch applications'
+    });
+  }
+});
+
 
 module.exports = router;

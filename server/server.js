@@ -26,9 +26,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/riseup_te
 app.use('/api/contact', require('./routes/contact'));
 app.use('/api/reviews', require('./routes/reviewRoutes'));
 app.use('/api/applications', require('./routes/applications'));
-// app.use('/api/application', require('./routes/application'));
 app.use('/api/jobapplications', require('./routes/jobapplications'));
-app.use('/api/locations', require('./routes/locations')); // Add locations route
+app.use('/api/locations', require('./routes/locations')); 
 
 // Health check
 app.get('/api/health', (req, res) => {
@@ -38,6 +37,85 @@ app.get('/api/health', (req, res) => {
     timestamp: new Date().toISOString()
   });
 });
+
+// In your backend routes
+
+// Get all reviews
+app.get('/api/reviews', async (req, res) => {
+  try {
+    const reviews = await Review.find().sort({ createdAt: -1 })
+    res.json({ success: true, reviews })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+// Get all job applications
+app.get('/api/jobapplications', async (req, res) => {
+  try {
+    const applications = await JobApplication.find().sort({ createdAt: -1 })
+    res.json({ success: true, applications })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+// Get all contact submissions
+app.get('/api/contact', async (req, res) => {
+  try {
+    const submissions = await Contact.find().sort({ createdAt: -1 })
+    res.json({ success: true, submissions })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+// Get all membership applications
+app.get('/api/applications', async (req, res) => {
+  try {
+    const applications = await MembershipApplication.find().sort({ createdAt: -1 })
+    res.json({ success: true, applications })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+// Delete endpoints
+app.delete('/api/reviews/:id', async (req, res) => {
+  try {
+    await Review.findByIdAndDelete(req.params.id)
+    res.json({ success: true })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+app.delete('/api/jobapplications/:id', async (req, res) => {
+  try {
+    await JobApplication.findByIdAndDelete(req.params.id)
+    res.json({ success: true })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+app.delete('/api/contact/:id', async (req, res) => {
+  try {
+    await Contact.findByIdAndDelete(req.params.id)
+    res.json({ success: true })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
+
+app.delete('/api/applications/:id', async (req, res) => {
+  try {
+    await MembershipApplication.findByIdAndDelete(req.params.id)
+    res.json({ success: true })
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message })
+  }
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {

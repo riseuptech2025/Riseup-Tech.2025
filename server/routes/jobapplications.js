@@ -48,5 +48,26 @@ router.post('/apply', upload.single('resume'), async (req, res) => {
     res.status(500).json({ success: false, message: 'Failed to submit application', error: error.message });
   }
 });
+// Get all job applications (Admin)
+router.get('/', async (req, res) => {
+  try {
+    const applications = await JobApplication
+      .find()
+      .sort({ appliedAt: -1 });
+
+    res.status(200).json({
+      success: true,
+      count: applications.length,
+      data: applications
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Failed to fetch applications',
+      error: error.message
+    });
+  }
+});
+
 
 module.exports = router;
