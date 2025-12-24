@@ -13,7 +13,7 @@ const AdminLogin = ({ onLogin }) => {
     e.preventDefault()
     
     // Simple authentication - in production, use proper authentication
-    if (credentials.username === 'admin' && credentials.password === 'riseup2025') {
+    if (credentials.username === 'admin' && credentials.password === 'Riseup//@2025//') {
       localStorage.setItem('adminAuthenticated', 'true')
       onLogin()
     } else {
