@@ -14,6 +14,7 @@ import JobApplication from './components/JobApplication'
 import AppReview from './components/AppReview'
 import ProtectedAdmin from './components/ProtectedAdmin'
 import NotFound from './pages/NotFound' 
+import Adminlogin from './pages/admin/AdminLogin'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/careers/apply/:jobId" element={<JobApplication />} />
             <Route path="/review" element={<AppReview />} />
             <Route path="/admin" element={<ProtectedAdmin />} />
+            <Route path="/admin/login" element={<Adminlogin />} />
             {/* Catch all route - 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>

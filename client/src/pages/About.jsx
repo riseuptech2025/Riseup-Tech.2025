@@ -6,7 +6,7 @@ import { ContinuousSection, ContinuousCard, GradientText, GlassPanel } from '../
 import SEO from '../components/SEO'
 
 // Import the images
-import RamanandMandalImage from '../assets/members/ramanand.jpg'
+import RamanandMandalImage from '../assets/members/ramanand.png'
 import DipakKumarMandalKhatweImage from '../assets/members/dipak.jpeg'
 
 const About = () => {

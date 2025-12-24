@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Lock, Eye, EyeOff } from 'lucide-react'
-import AnimatedBackground from './AnimatedBackground'
+import AnimatedBackground from '../../components/AnimatedBackground'
 
 const AdminLogin = ({ onLogin }) => {
   const [credentials, setCredentials] = useState({ username: '', password: '' })

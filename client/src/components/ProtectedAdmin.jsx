@@ -1,7 +1,7 @@
 // src/components/ProtectedAdmin.jsx
 import React, { useState, useEffect } from 'react'
-import AdminLogin from './AdminLogin'
-import AdminDashboard from './AdminDashboard'
+import AdminLogin from '../pages/admin/AdminLogin'
+import AdminDashboard from '../pages/admin/AdminDashboard'
 
 const ProtectedAdmin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
