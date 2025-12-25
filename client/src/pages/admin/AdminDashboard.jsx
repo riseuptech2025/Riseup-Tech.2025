@@ -9,7 +9,7 @@ import {
   AlertCircle
 } from 'lucide-react'
 
-const API_BASE_URL = 'https://riseup-tech-2025-1.onrender.com/api'
+const API_BASE_URL = 'https://riseup-tech-2025-moph.vercel.app//api'
 
 const AdminDashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
