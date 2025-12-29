@@ -28,7 +28,7 @@ const Contact = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch('https://riseup-tech-2025-moph.vercel.app/api/contact/submit', {
+      const response = await fetch('https://riseup-tech-2025.onrender.com/api/contact/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
