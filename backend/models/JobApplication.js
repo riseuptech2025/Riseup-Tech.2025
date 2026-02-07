@@ -7,9 +7,11 @@ const jobApplicationSchema = new mongoose.Schema(
     phone: { type: String, required: true },
     position: { type: String, required: true },
     coverLetter: { type: String, required: true },
-    resume: { type: String, required: true }
+    resumeUrl: { type: String, required: true }
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("JobApplication", jobApplicationSchema);
+module.exports =
+  mongoose.models.JobApplication ||
+  mongoose.model("JobApplication", jobApplicationSchema);

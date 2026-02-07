@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Upload, CheckCircle } from 'lucide-react'
+import uploadResumeToCloudinary from "../utils/cloudinaryUpload";
+
 
 const JobApplication = () => {
   const { jobId } = useParams()
@@ -27,39 +29,47 @@ const JobApplication = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
+  e.preventDefault();
+  setIsLoading(true);
 
-    const formDataToSend = new FormData()
-    formDataToSend.append('fullName', formData.fullName)
-    formDataToSend.append('email', formData.email)
-    formDataToSend.append('phone', formData.phone)
-    formDataToSend.append('position', formData.position)
-    formDataToSend.append('coverLetter', formData.coverLetter)
-    if (formData.resume) {
-      formDataToSend.append('resume', formData.resume)
-    }
+  try {
+    // Upload resume first
+    const resumeUrl = await uploadResumeToCloudinary(formData.resume);
 
-    try {
-      const response = await fetch('https://riseup-tech-2025-thjz.vercel.app/api/jobapplications/apply', {
-        method: 'POST',
-        body: formDataToSend,
-      })
-
-      const data = await response.json()
-
-      if (data.success) {
-        setIsSubmitted(true)
-      } else {
-        alert(data.message || 'Failed to submit application')
+    // Send JSON to backend
+    const response = await fetch(
+      "https://riseup-tech-2025-thjz.vercel.app/api/jobapplications/apply",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          position: formData.position,
+          coverLetter: formData.coverLetter,
+          resumeUrl
+        })
       }
-    } catch (error) {
-      console.error('Submission error:', error)
-      alert('Failed to submit application. Please try again.')
-    } finally {
-      setIsLoading(false)
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+      setIsSubmitted(true);
+    } else {
+      alert(data.message);
     }
+  } catch (error) {
+    console.error(error);
+    alert("Submission failed");
+  } finally {
+    setIsLoading(false);
   }
+};
+
 
   if (isSubmitted) {
     return (
