@@ -338,7 +338,7 @@ const MembershipForm = ({ onClose }) => {
       formDataToSend.append('provinceName', provinceNames[formData.province] || '')
       
       // Send to backend
-      const response = await fetch('https://riseup-tech-2025.onrender.com/api/applications', {
+      const response = await fetch('http://localhost:5000/api/applications', {
         method: 'POST',
         body: formDataToSend
       })

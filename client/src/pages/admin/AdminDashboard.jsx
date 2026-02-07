@@ -9,7 +9,7 @@ import {
   AlertCircle
 } from 'lucide-react'
 
-const API_BASE_URL = 'https://riseup-tech-2025.onrender.com/api'
+const API_BASE_URL = 'http://localhost:5000/api'
 
 const AdminDashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
