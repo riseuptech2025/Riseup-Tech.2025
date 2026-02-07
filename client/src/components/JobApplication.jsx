@@ -33,37 +33,33 @@ const JobApplication = () => {
   setIsLoading(true);
 
   try {
-    // Upload resume first
+    // 1️⃣ Upload resume
     const resumeUrl = await uploadResumeToCloudinary(formData.resume);
 
-    // Send JSON to backend
+    // 2️⃣ Send to backend
     const response = await fetch(
-  "https://riseup-tech-2025-thjz.vercel.app/api/jobapplications/apply",
-  {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      fullName: formData.fullName,
-      email: formData.email,
-      phone: formData.phone,
-      position: formData.position,
-      coverLetter: formData.coverLetter,
-      resumeUrl // from Cloudinary upload
-    })
-  }
-);
-
+      "https://riseup-tech-2025-thjz.vercel.app/api/jobapplications/apply",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          position: formData.position,
+          coverLetter: formData.coverLetter,
+          resumeUrl
+        })
+      }
+    );
 
     const data = await response.json();
+    if (!data.success) alert(data.message);
+    else setIsSubmitted(true);
 
-    if (data.success) {
-      setIsSubmitted(true);
-    } else {
-      alert(data.message);
-    }
   } catch (error) {
-    console.error(error);
-    alert("Submission failed");
+    console.error("Upload error:", error.message);
+    alert("Failed to upload resume. Check file type and size.");
   } finally {
     setIsLoading(false);
   }
