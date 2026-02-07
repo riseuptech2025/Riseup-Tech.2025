@@ -41,7 +41,7 @@ const JobApplication = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/jobapplications/apply', {
+      const response = await fetch('https://riseup-tech-2025-thjz.vercel.app/api/jobapplications/apply', {
         method: 'POST',
         body: formDataToSend,
       })
