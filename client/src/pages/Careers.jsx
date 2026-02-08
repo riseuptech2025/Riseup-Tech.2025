@@ -16,6 +16,7 @@ const Careers = () => {
       salary: 'Competitive',
       description: 'Build beautiful, responsive user interfaces using React, Vite, and Tailwind CSS.',
       requirements: ['3+ years React experience', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      shrinkUrl: 'https://shrinkme.click/NBuKY'
     },
     {
       id: 'ai-researcher',
@@ -26,6 +27,7 @@ const Careers = () => {
       salary: 'Competitive',
       description: 'Research and develop cutting-edge AI models and algorithms.',
       requirements: ['PhD in ML/AI', 'Python', 'TensorFlow/PyTorch', 'Research publications'],
+      shrinkUrl: 'https://shrinkme.click/Z5UPOs0'
     },
     {
       id: 'ui-ux-designer',
@@ -36,6 +38,7 @@ const Careers = () => {
       salary: 'Competitive',
       description: 'Design intuitive and beautiful user experiences for our products.',
       requirements: ['5+ years design experience', 'Figma', 'User research', 'Prototyping'],
+      shrinkUrl: 'https://shrinkme.click/48wWXBP'
     },
     {
       id: 'backend-engineer',
@@ -46,6 +49,7 @@ const Careers = () => {
       salary: 'Competitive',
       description: 'Build scalable backend systems and APIs for our platforms.',
       requirements: ['Node.js/Python', 'PostgreSQL', 'AWS/GCP', 'System design'],
+      shrinkUrl: 'https://shrinkme.click/t09c'
     },
     {
       id: 'devops-engineer',
@@ -56,6 +60,7 @@ const Careers = () => {
       salary: 'Competitive',
       description: 'Manage infrastructure and ensure smooth deployment and scaling.',
       requirements: ['Docker/Kubernetes', 'CI/CD', 'Monitoring', 'Cloud infrastructure'],
+      shrinkUrl: 'https://shrinkme.click/sXNa4M'
     },
     {
       id: 'product-manager',
@@ -66,6 +71,7 @@ const Careers = () => {
       salary: 'Competitive',
       description: 'Lead product development and strategy for our AI tools.',
       requirements: ['Product management', 'Agile methodology', 'Data analysis', 'User research'],
+      shrinkUrl: 'https://shrinkme.click/vrjN3'
     },
   ]
 
@@ -101,6 +107,11 @@ const Careers = () => {
       description: 'Work from anywhere in the world',
     },
   ]
+
+  const handleApplyClick = (shrinkUrl) => {
+    // Redirect to shrinkme.click URL
+    window.open(shrinkUrl, '_blank', 'noopener,noreferrer');
+  }
 
   return (
     <AnimatedBackground>
@@ -243,12 +254,12 @@ const Careers = () => {
                     </div>
                   </div>
                   <div className="mt-4 lg:mt-0 lg:ml-6">
-                    <Link
-                      to={`/careers/apply/${job.id}`}
+                    <button
+                      onClick={() => handleApplyClick(job.shrinkUrl)}
                       className="btn-primary whitespace-nowrap"
                     >
                       Apply Now
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </motion.div>
