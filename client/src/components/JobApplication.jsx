@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Upload, CheckCircle } from 'lucide-react'
-import uploadResumeToCloudinary from "../../utils/cloudinaryUpload";
+import uploadResumeToCloudinary from "../utils/cloudinaryUpload";
 
 
 const JobApplication = () => {
