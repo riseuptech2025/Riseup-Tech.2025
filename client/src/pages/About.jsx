@@ -27,17 +27,17 @@ const About = () => {
   const leadership = [
     {
       name: 'Ramanand Mandal',
-      position: 'CEO & CTO',
+      position: 'CEO & Founder',
       description: 'Visionary leader overseeing company strategy, product design, and ecosystem growth. Driving innovation in Nepal\'s tech landscape.',
       image: RamanandMandalImage,
-      alt: 'Ramanand Mandal - CEO & CTO of Riseup-Tech'
+      alt: 'Ramanand Mandal - CEO & Founder of Riseup-Tech'
     },
     {
       name: 'Dipak Kumar Mandal Khatwe',
-      position: 'Founder',
+      position: 'COO & Co-Founder',
       description: 'Expert in AI and technology, leading the development of Riseup\'s cutting-edge solutions. Sustaining growth and scalability.',
       image: DipakKumarMandalKhatweImage,
-      alt: 'Dipak Kumar Mandal Khatwe - Founder of Riseup-Tech'
+      alt: 'Dipak Kumar Mandal Khatwe - COO & Co-Founder of Riseup-Tech'
     }
   ]
 
