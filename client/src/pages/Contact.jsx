@@ -69,13 +69,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'riseuptech2025@gmail.com',
+      details: 'hello@riseuptech.com.np',
       description: 'Send us an email anytime'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+977-9827399860',
+      details: '+977-9827399860 ',
       description: 'Mon to Fri, 9AM to 6PM'
     },
     {
@@ -178,7 +178,7 @@ const Contact = () => {
                 About Riseup-Tech
               </h3>
               <div className="space-y-3 text-gray-600 dark:text-gray-400">
-                <p><strong>Founded:</strong> October 16, 2025</p>
+                <p><strong>Founded:</strong> April 18, 2025</p>
                 <p><strong>Company Type:</strong> Private Technology & Software Development</p>
                 <p><strong>Core Focus:</strong> Building integrated digital ecosystems</p>
                 <p><strong>Mission:</strong> Empowering through technology and innovation</p>

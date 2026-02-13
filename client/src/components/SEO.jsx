@@ -23,9 +23,9 @@ const SEO = ({ title, description, keywords, image }) => {
     const twitterTitle = document.querySelector('meta[property="twitter:title"]')
     const twitterDescription = document.querySelector('meta[property="twitter:description"]')
     const twitterImage = document.querySelector('meta[property="twitter:image"]')
-    const canonical = document.querySelector('link[rel="canonical"]')
+    const canonical = document.querySelector('link[rel="canonical"]') 
     
-    const currentUrl = `https://riseup-tech-2025.vercel.app${location.pathname}`
+    const currentUrl = `https://www.riseup-tech.com.np${location.pathname}`
     
     if (metaDescription) metaDescription.setAttribute('content', description || defaultDescription)
     if (metaKeywords) metaKeywords.setAttribute('content', keywords || defaultKeywords)

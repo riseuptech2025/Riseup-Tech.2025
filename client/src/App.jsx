@@ -8,7 +8,7 @@ import About from './pages/About'
 import Ecosystem from './pages/Ecosystem'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
-import News from './pages/News'
+// import News from './pages/News'
 import HelpSupport from './pages/HelpSupport'
 import JobApplication from './components/JobApplication'
 import AppReview from './components/AppReview'
@@ -29,7 +29,7 @@ function App() {
             <Route path="/ecosystem" element={<Ecosystem />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/news" element={<News />} />
+            {/* <Route path="/news" element={<News />} /> */}
             <Route path="/help-support" element={<HelpSupport />} />
             <Route path="/careers/apply/:jobId" element={<JobApplication />} />
             <Route path="/review" element={<AppReview />} />
