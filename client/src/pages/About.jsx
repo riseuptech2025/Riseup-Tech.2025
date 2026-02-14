@@ -66,7 +66,7 @@ const About = () => {
       description: 'Leading product strategy and user experience across all Riseup platforms. Passionate about creating intuitive digital solutions.',
       image: PlaceholderImage1,
       alt: 'Sarik Adhikari - Head of Product at Riseup-Tech',
-      expertise: ['Product Strategy', 'UX Design', 'Agile Development'],
+      expertise: ['Product Strategy', 'Python', 'AI/ML', 'Data Science'],
       icon: Rocket,
       color: 'from-blue-500 to-cyan-400'
     },
@@ -99,7 +99,7 @@ const About = () => {
       description: 'Building scalable web applications and Mobile App Development. Leads the development of core platform features.',
       image: PlaceholderImage4,
       alt: 'Swarnim Bastola - Lead Full Stack Developer at Riseup-Tech',
-      expertise: ['React', 'Node.js', 'Php-laravel', 'Cloud Architecture'],
+      expertise: ['React', 'Node.js', 'UI/UX', 'Rapid Prototyping'],
       icon: Code,
       color: 'from-orange-400 to-red-400'
     }
