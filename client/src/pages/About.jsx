@@ -10,10 +10,10 @@ import RamanandMandalImage from '../assets/members/ramanand.png'
 import DipakKumarMandalKhatweImage from '../assets/members/dipak.jpeg'
 import GajanandMandal from '../assets/members/gajanand.jpg'
 // Note: You'll need to add these images to your assets folder
-import PlaceholderImage1 from '../assets/members/placeholder1.jpeg'
-import PlaceholderImage2 from '../assets/members/placeholder2.jpeg'
-import PlaceholderImage3 from '../assets/members/placeholder3.jpeg'
-// import PlaceholderImage4 from '../assets/members/placeholder4.jpeg'
+import PlaceholderImage1 from '../assets/members/sarik.jpeg'
+import PlaceholderImage2 from '../assets/members/ujjwal.jpeg'
+import PlaceholderImage3 from '../assets/members/dhiraj.jpeg'
+import PlaceholderImage4 from '../assets/members/swarnim.jpeg'
 
 const About = () => {
   const timeline = [
@@ -97,7 +97,7 @@ const About = () => {
       position: 'Lead Full Stack Developer',
       department: 'Engineering',
       description: 'Building scalable web applications and Mobile App Development. Leads the development of core platform features.',
-      // image: PlaceholderImage4,
+      image: PlaceholderImage4,
       alt: 'Swarnim Bastola - Lead Full Stack Developer at Riseup-Tech',
       expertise: ['React', 'Node.js', 'Php-laravel', 'Cloud Architecture'],
       icon: Code,
