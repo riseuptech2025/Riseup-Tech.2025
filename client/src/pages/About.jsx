@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 // Import the images
 import RamanandMandalImage from '../assets/members/ramanand.png'
 import DipakKumarMandalKhatweImage from '../assets/members/dipak.jpeg'
-import GajanandMandal from '../assets/members/gajanand.jpg'
+import GajanandMandalImage from '../assets/members/gajanand.jpg'
 // Note: You'll need to add these images to your assets folder
 import PlaceholderImage1 from '../assets/members/sarik.jpeg'
 import PlaceholderImage2 from '../assets/members/ujjwal.jpeg'
@@ -51,7 +51,7 @@ const About = () => {
       name: 'Gajanand Mandal',
       position: 'HR Manager',
       description: 'Innovative tech leader, driving the development of Riseup\'s core technologies. Ensuring seamless integration and performance.',
-      image: GajanandMandal,
+      image: GajanandMandalImage,
       alt: 'Gajanand Mandal - HR Manager',
       expertise: ['Strategic HR Planning', 'Performance & Development', 'Conflict Resolution & Negotiation', 'Employee Engagement & Retention']
     },
