@@ -32,7 +32,7 @@ function App() {
             {/* <Route path="/news" element={<News />} /> */}
             <Route path="/help-support" element={<HelpSupport />} />
             <Route path="/careers/apply/:jobId" element={<JobApplication />} />
-            <Route path="/review" element={<AppReview />} />
+            <Route path="https://g.page/r/CdEwjieLcajpEBM/review" element={<AppReview />} />
             <Route path="/admin" element={<ProtectedAdmin />} />
             <Route path="/admin/login" element={<Adminlogin />} />
             {/* Catch all route - 404 */}

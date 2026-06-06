@@ -101,7 +101,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/review" className="text-gray-400 hover:text-white transition-all hover:translate-x-1 inline-block">
+                <Link to="https://g.page/r/CdEwjieLcajpEBM/review" className="text-gray-400 hover:text-white transition-all hover:translate-x-1 inline-block">
                   Give Review
                 </Link>
               </li>
